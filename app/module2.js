@@ -1,18 +1,18 @@
 'use strict'
 module.exports = {
 
-reverseString: function(str){
-    var res
-  if (str === ''){
+reverseString: function(myString){
+    var newstr
+  if (myString === ''){
     return null;
-  } else if (str !== ''){
+  } else if (myString !== ''){
     var splitString = str.split("");
     var reverseArray = splitString.reverse(); 
     var joinArray = reverseArray.join("");
-  } if (joinArray === str){
-      res =  true;
+  } if (joinArray === mystring){
+      newString =  true;
     } else{
-      res = joinArray;
+      newstr = joinArray;
     }
     return res;
 }
