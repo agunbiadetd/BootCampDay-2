@@ -39,10 +39,10 @@ describe("words()", function() {
   });
   it("counts multiple spaces as one", function() {
     var expectedCounts = { hello: 1, world: 1 };
-    expect(words("hello  world")).toEqual(expectedCounts);
+    expect(words("hello world")).toEqual(expectedCounts);
   });
   it("handles properties that exist on Object's prototype", function() {
-    var expectedCounts = { reserved: 1, words : 1, like :1,  prototype: 1, and : 1, toString: 1,  "ok?": 1};
-    expect(words("reserved words like prototype and toString ok?")).toEqual(expectedCounts);
+    var expectedCounts = { reserved: 1, words : 1, like :1,  prototype: 1, and : 1, to: 1, String: 1, "ok?": 1};
+    expect(words("reserved words like prototype and to String ok?")).toEqual(expectedCounts);
   });
 });
